@@ -1,0 +1,68 @@
+nav {
+  background-color: rgba(102, 97, 97, 0.644);
+  width: 100%;
+  color: white;
+  height: 6rem;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  background-color: blue;
+  height: 100%;
+}
+nav li {
+  background-color: red;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1.8rem;
+  list-style-type: none; /*Remove those fucking bullets */
+  display: block; /*in Responsive element will take the entire width of the screen */
+  font-family: monospace;
+}
+nav li a {
+  text-decoration: none;
+  background-color: green;
+}
+
+nav li a:hover {
+  background-color: #c6e9ff;
+  cursor: pointer;
+}
+
+button {
+  display: none;
+}
+/*change the layout of the navigation bar for all the screens 
+that have a width less or equal than 500px*/
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul {
+    flex-direction: column;
+  }
+
+  /* deletes margin on top or bottom of the a tag*/
+  li {
+    margin: 0;
+  }
+  /* makes sure that the a tag will take the entire screen*/
+  a {
+    display: block;
+  }
+  button {
+    /*makes the button visible*/
+    display: block;
+
+    padding: 2vw;
+    font-size: 3vh;
+    background-color: #afe0ff;
+    border: none;
+
+    /*outline none - removes the default blue border that appears anytime you click on the button*/
+    outline: none;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+}
