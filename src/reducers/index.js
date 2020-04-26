@@ -3,5 +3,5 @@ import { attackReducer, siteNameReducer } from './attackReducer';
 
 export default combineReducers({
   attackReducer,
-  siteNameReducer: siteNameReducer,
+  siteNameReducer,
 });

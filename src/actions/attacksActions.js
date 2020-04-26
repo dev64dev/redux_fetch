@@ -16,7 +16,7 @@ export function fetchData() {
       .get('/default/VisualizatorApi')
       .then((response) => {
         dispatch(setData(response.data));
-        console.log('response ', response.data);
+        console.log('response.data ', response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -31,10 +31,3 @@ function setData(data) {
     payload: data,
   };
 }
-
-// export const newSiteName = () => (dispatch, newName) => {
-//   dispatch({
-//     type: SITE_NAME,
-//     payload: newName,
-//   });
-// };
