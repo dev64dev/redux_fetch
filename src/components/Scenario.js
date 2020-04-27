@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchData, newSiteName } from '../actions/attacksActions';
+import { fetchData } from '../actions/attacksActions';
+import { Button } from '@material-ui/core';
 
-class Test extends Component {
+class Scenario extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,6 +16,11 @@ class Test extends Component {
   render() {
     return (
       <div>
+        <Button>BTN</Button>
+        <Button variant='contained' color='primary'>
+          asdasd
+        </Button>
+
         <h3>{this.props.siteNameReducer.siteName}</h3>
         <h1>{this.props.attackReducer.campaign_name}</h1>
       </div>
@@ -36,4 +41,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Test);
+export default connect(mapStateToProps, mapDispatchToProps)(Scenario);

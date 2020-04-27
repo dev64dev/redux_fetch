@@ -5,3 +5,6 @@
 html {
   font-size: 10px;
 }
+.MuiToolbar-root {
+  background-color: green;
+}

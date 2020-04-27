@@ -8,7 +8,7 @@ module.exports = function (app) {
       changeOrigin: true,
       logLevel: 'debug',
       headers: {
-        'x-api-key': '9Iaq5lP41La1PWe8XMRdRTQNTZCypPJ6NbdjHxy9',
+        'x-api-key': process.env.REACT_APP_API_KEY,
         'Content-Type': 'application/json',
       },
     })
