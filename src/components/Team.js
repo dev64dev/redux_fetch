@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
 
 const Team = (props) => {
+  const [state, setState] = useState();
+
   const getColor = (status) => {
     switch (status) {
-      case 'done':
+      case 'DONE':
         return 'done';
-        break;
-      case 'in_progress':
+      case 'IN PROGRESS':
         return 'in_progress';
-        break;
-      case 'not_started':
+      case 'NOT STARTED':
         return 'not_started';
-        break;
       default:
-        return 'light';
+        return 'default';
     }
   };
 
@@ -23,29 +22,35 @@ const Team = (props) => {
     return teamRGX;
   };
 
+  const toggleStatus = (status) => {
+    const stat = status.status.toUpperCase().replace('_', ' ');
+    console.log(stat);
+    setState(stat);
+  };
+
   return (
-    <div className='container'>
-      <div className='team_name'>
+    <div className="container">
+      <div className="team_name">
         <span>{cappitalize(props.team.team_name)}: </span>
       </div>
-      <div className='steps'>
+      <div className="steps">
         {props.team.steps.length === 0 ? (
-          <div className='no-steps-msg'>
-            <p>'Not Steps here..'</p>
+          <div className="no-steps-msg">
+            <h2>Can't find any steps here..</h2>
           </div>
         ) : (
-          props.team.steps.map((item, idx) => (
-            <div key={idx} className={`p-2 m-2 bg-light`}>
-              <div className='step_name'>
-                <span> {item.step_name}</span>
+          <Fragment>
+            {props.team.steps.map((item, idx) => (
+              <div key={idx}>
+                <button className="step" onClick={() => toggleStatus(item)}>
+                  {item.step_name}
+                </button>
               </div>
-              <button className='status'>
-                <span className={`${getColor(item.status)}`}>
-                  {item.status.toUpperCase().replace('_', ' ')}
-                </span>
-              </button>
+            ))}
+            <div className="status">
+              <button className={`${getColor(state)}`}>{state}</button>
             </div>
-          ))
+          </Fragment>
         )}
       </div>
     </div>

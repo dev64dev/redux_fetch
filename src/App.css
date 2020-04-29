@@ -3,61 +3,124 @@
   padding: 0;
 }
 html {
-  font-size: 10px;
+  font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 100;
-  background-color: #eeeeee;
+  font-weight: 300;
+  background-color: #2c3e50;
 }
-.MuiToolbar-root {
-  background-color: green;
-}
+
 .btn {
   background-color: #eeeeee;
-  font-size: 1.6em;
+  font-size: 1.6rem;
+}
+.modal {
+  background-color: #fff;
+  border: 1px solid #3c4858;
+  border-radius: 30px;
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
 }
 .container {
-  font-size: 1.6em;
+  border: 1px solid #3c4858;
   display: flex;
-  background-color: rgb(195, 215, 223);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-evenly;
+  margin: auto;
+  border-radius: 30px;
+  height: 100%;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .camp-name {
   background-color: #fff;
-  font-size: 2em;
+  font-size: 2rem;
   color: #3c4858;
   text-align: center;
 }
 .steps {
   display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 10px;
+}
+.step:hover {
+  transition: border-top-color 0.15s linear,
+    border appearances border-right-color 0.15s linear 0.1s,
+    border-bottom-color 0.15s linear 0.2s;
+}
+.step:focus {
+  color: red;
+}
+.step {
+  border: 1px solid #3c4858;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+button:focus {
+  outline-color: #fff;
 }
 .team_name {
-  font-size: 1.2em;
+  font-size: 2rem;
   color: #3c4858;
   letter-spacing: 0.1px;
-  margin: 10px;
+  margin: 1rem;
+  width: 15rem;
 }
 
 .step_name {
-  font-size: 1em;
+  font-size: 1.6rem;
   color: #3c4858;
-  letter-spacing: 0.1px;
-  margin: 10px;
+  margin: 1rem;
   text-align: center;
 }
-.status {
-  text-align: center;
-  font-weight: 300;
-  padding: 6px 16px;
-  letter-spacing: normal !important;
-  border: none;
-  border-radius: 30px;
-  width: 50%;
+.step_name span {
+  vertical-align: middle;
+}
+.status button {
+  border: 1px solid #2c3e50;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  margin: 1rem;
 }
 .status .not_started {
   background-color: #f32013;
+  animation-name: not_started;
+  animation-duration: 2s;
 }
 .status .in_progress {
   background-color: rgb(255, 204, 0);
 }
 .status .done {
   background-color: rgb(75, 181, 67);
+}
+.status .default {
+  background-color: #ebe1e1;
+}
+.no-steps-msg {
+  color: red;
+  position: center;
+  margin: auto;
+}
+.step:hover {
+  background-color: antiquewhite;
+}
+
+@keyframes not_started {
+  from {
+    background-color: #e2e2e2;
+  }
+  to {
+    background-color: #f32013;
+  }
 }

@@ -30,7 +30,6 @@ export const siteNameReducer = (state = myState, action) => {
   switch (action.type) {
     case SITE_NAME:
       return { ...state, siteName: action.payload };
-      break;
     default:
       return state;
   }

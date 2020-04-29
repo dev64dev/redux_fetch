@@ -14,4 +14,5 @@ module.exports = function (app) {
     })
   );
   console.log('from createProxyMiddleware');
+  console.log('from createProxyMiddleware', process.env.REACT_APP_API_KEY);
 };

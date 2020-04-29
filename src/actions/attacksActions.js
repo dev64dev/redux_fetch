@@ -1,14 +1,5 @@
-import { FETCH_DATA, SITE_NAME } from './types';
+import { FETCH_DATA } from './types';
 import axios from 'axios';
-
-// async function fetchData() {
-//   const res = await fetch('/default/VisualizatorApi');
-//   if (res.ok === false) {
-//     throw new Error(`${res.status} ${res.statusText}`);
-//   }
-//   const data = await res.json();
-//   return data;
-// }
 
 export function fetchData() {
   return function (dispatch) {

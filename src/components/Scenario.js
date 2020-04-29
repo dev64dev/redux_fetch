@@ -2,16 +2,10 @@ import React, { Component } from 'react';
 import Team from './Team';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions/attacksActions';
-import { Button } from '@material-ui/core';
 
 class Scenario extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   async componentDidMount() {
     await this.props.fetchData();
-    console.log('[componentDidMount] ', this.props.attackReducer);
   }
 
   render() {
@@ -20,10 +14,10 @@ class Scenario extends Component {
     ));
     return (
       <div>
-        <div className='camp-name'>
+        <div className="camp-name">
           <h1>Scenario: {this.props.attackReducer.campaign_name}</h1>
         </div>
-        {team}
+        <div className="modal">{team}</div>
       </div>
     );
   }
