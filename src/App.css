@@ -24,13 +24,18 @@ html {
   background-color: #fff;
   font-size: 2em;
   color: #3c4858;
+  text-align: center;
+}
+.steps {
+  display: flex;
 }
 .team_name {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #3c4858;
   letter-spacing: 0.1px;
   margin: 10px;
 }
+
 .step_name {
   font-size: 1em;
   color: #3c4858;
@@ -41,9 +46,11 @@ html {
 .status {
   text-align: center;
   font-weight: 300;
+  padding: 6px 16px;
   letter-spacing: normal !important;
-  border: 1px solid black;
-  border-radius: 100%;
+  border: none;
+  border-radius: 30px;
+  width: 50%;
 }
 .status .not_started {
   background-color: #f32013;

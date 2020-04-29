@@ -20,11 +20,8 @@ class Scenario extends Component {
     ));
     return (
       <div>
-        <Button variant='contained' color='primary'>
-          asdasd
-        </Button>
         <div className='camp-name'>
-          <h1>{this.props.attackReducer.campaign_name}</h1>
+          <h1>Scenario: {this.props.attackReducer.campaign_name}</h1>
         </div>
         {team}
       </div>

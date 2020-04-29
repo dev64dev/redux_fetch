@@ -26,7 +26,7 @@ const Team = (props) => {
   return (
     <div className='container'>
       <div className='team_name'>
-        <h1>{cappitalize(props.team.team_name)}</h1>
+        <span>{cappitalize(props.team.team_name)}: </span>
       </div>
       <div className='steps'>
         {props.team.steps.length === 0 ? (
@@ -36,12 +36,14 @@ const Team = (props) => {
         ) : (
           props.team.steps.map((item, idx) => (
             <div key={idx} className={`p-2 m-2 bg-light`}>
-              <div className='step_name'>{item.step_name}</div>
-              <div className='status'>
-                <p className={`${getColor(item.status)}`}>
-                  {item.status.toUpperCase().replace('_', ' ')}
-                </p>
+              <div className='step_name'>
+                <span> {item.step_name}</span>
               </div>
+              <button className='status'>
+                <span className={`${getColor(item.status)}`}>
+                  {item.status.toUpperCase().replace('_', ' ')}
+                </span>
+              </button>
             </div>
           ))
         )}
