@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Team from './Team';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions/attacksActions';
 import { Button } from '@material-ui/core';
@@ -14,15 +15,18 @@ class Scenario extends Component {
   }
 
   render() {
+    const team = this.props.attackReducer.team_instances.map((item, idx) => (
+      <Team team={item} key={idx} />
+    ));
     return (
       <div>
-        <Button>BTN</Button>
         <Button variant='contained' color='primary'>
           asdasd
         </Button>
-
-        <h3>{this.props.siteNameReducer.siteName}</h3>
-        <h1>{this.props.attackReducer.campaign_name}</h1>
+        <div className='camp-name'>
+          <h1>{this.props.attackReducer.campaign_name}</h1>
+        </div>
+        {team}
       </div>
     );
   }
@@ -30,7 +34,6 @@ class Scenario extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    siteNameReducer: state.siteNameReducer,
     attackReducer: state.attackReducer,
   };
 };

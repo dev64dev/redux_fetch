@@ -4,7 +4,53 @@
 }
 html {
   font-size: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 100;
+  background-color: #eeeeee;
 }
 .MuiToolbar-root {
   background-color: green;
+}
+.btn {
+  background-color: #eeeeee;
+  font-size: 1.6em;
+}
+.container {
+  font-size: 1.6em;
+  display: flex;
+  background-color: rgb(195, 215, 223);
+}
+.camp-name {
+  background-color: #fff;
+  font-size: 2em;
+  color: #3c4858;
+}
+.team_name {
+  font-size: 1em;
+  color: #3c4858;
+  letter-spacing: 0.1px;
+  margin: 10px;
+}
+.step_name {
+  font-size: 1em;
+  color: #3c4858;
+  letter-spacing: 0.1px;
+  margin: 10px;
+  text-align: center;
+}
+.status {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: normal !important;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+.status .not_started {
+  background-color: #f32013;
+}
+.status .in_progress {
+  background-color: rgb(255, 204, 0);
+}
+.status .done {
+  background-color: rgb(75, 181, 67);
 }
