@@ -24,7 +24,6 @@ const Team = (props) => {
 
   const toggleStatus = (status) => {
     const stat = status.status.toUpperCase().replace('_', ' ');
-    console.log(stat);
     setState(stat);
   };
 

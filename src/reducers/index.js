@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-import { attackReducer, siteNameReducer } from './attackReducer';
+import { attackReducer } from './attackReducer';
 
 export default combineReducers({
   attackReducer,
-  siteNameReducer,
 });

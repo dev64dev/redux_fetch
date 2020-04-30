@@ -7,7 +7,6 @@ export function fetchData() {
       .get('/default/VisualizatorApi')
       .then((response) => {
         dispatch(setData(response.data));
-        console.log('response.data ', response.data);
       })
       .catch((err) => {
         console.log(err);

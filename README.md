@@ -4,7 +4,7 @@
 
 ### `Add .env file to src`
 
-### `Then add This line to the .env: REACT_APP_API_KEY = Your API KEY`
+### `Add API KEY to the .env file`
 
 ### `npm start`
 
