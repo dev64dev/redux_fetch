@@ -2,8 +2,6 @@
 
 ### `npm install`
 
-### `Add .env file to src`
-
 ### `Add API KEY to the .env file`
 
 ### `npm start`
